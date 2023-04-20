@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleStory Helper</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/ArcaneSymbolCalculatorStyle.css">
+
+</head>
+<body>
+    
+    <header>
+        
+    </header>
+
+    <main>
+
+        <nav id="notViewNav">
+            <input type="button" id="openButton" value="OPEN" onclick="HideShowNav()">
+        </nav>
+
+        <nav id="nav">
+
+            <input type="button" id="openButton" value="OPEN" onclick="HideShowNav()">
+            <h1 id="logo"><a href="../index.html">MapleStory-Helper</a></h1>
+
+            <ul id="titles">
+
+
+                <li id="title">
+
+                    <p id="title-text">Symbol</p>
+
+                    <ul id="subtitle-items">
+                        <li id="subtitle-item"><a href="#">Arcane Symbol Calculator</a></li>
+                        <li id="subtitle-item"><a href="ArcaneTotalSymbolCalculator.html">Arcane Total Symbol Calculator</a></li>
+                    </ul>
+
+                </li>
+
+                <li id="title">
+
+                    <p id="title-text">sample 2</p>
+
+                    <ul id="subtitle-items">
+                        <li id="subtitle-item">sample 2-1</li>
+                        <li id="subtitle-item">sample 2-2</li>
+                        <li id="subtitle-item">sample 2-3</li>
+                    </ul>
+
+                </li>
+
+                
+
+            </ul>
+        </nav>
+    
+        <section>
+    
+            <p id="section-title">Symbol Calculator</p>
+
+            <table>
+                <thead>
+                  <tr>
+                    <td>
+                        <div id="type-picker" class="main-element">
+                            <select name="type" id="type" class="element">
+                                <option value="0">심볼 종류 (Symbol type)</option>
+                                <option value="vj">소멸의 여로 (Vanishing Journey)</option>
+                                <option value="cc">츄츄 아일랜드 (Chu Chu Island)</option>
+                                <option value="la">레헬른 (Lachelein)</option>
+                                <option value="ar">아르카나 (Arcana)</option>
+                                <option value="mo">모라스 (Morass)</option>
+                                <option value="es">에스페라 (Esfera)</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td rowspan="3">
+                        <div id="executor">
+                            <input type="button" name="calculate" id="calculate" class="element" value="계산 (calculate)" onclick="doCalculate()">
+                        </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                        <div id="level-picker" class="main-element">
+                            <select name="level" id="level" class="element">
+                                <option value="0">보유 심볼 레벨 (Symbol level of in-holds)</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+
+                    <td>
+
+                        <div id="inhold-inputs" class="main-element">
+                            <input type="number" min="0" max="2679" id="num" class="element" placeholder="보유 중인 심볼의 현재 개수 (Number of symbols currently in possession)">
+                        </div>
+
+                    </td>
+                  </tr>
+                </thead>
+                </table>
+    
+            <article id="section-article">
+                
+                
+                
+                
+               
+                
+                
+                
+                
+            
+                <div id="results">
+                    <div id="reqSymbolResult" class="result">
+                        <p class="result-Element">필요한 심볼의 개수 (Number of symbols required)</p>
+                        <h5 id="reqSymbol" class="result-Element">-</h5>
+                    </div>
+                    <div id="reqMesoResult" class="result">
+                        <p class="result-Element">필요한 메소 (Required Meso)</p>
+                        <h5 id="reqMeso" class="result-Element">-</h5>
+                    </div>
+                    <div id="reqPeriodResult" class="result">
+                        <p class="result-Element">필요한 기간 (Required period of time)</p>
+                        <h5 id="reqPeriod" class="result-Element">-</h5>
+                        
+                    </div>
+
+            </article>
+    
+        </section>
+    </main>
+    
+
+    
+
+    
+
+    <footer>
+        <p>2023 Homeria</p>
+        <ul id="footer-items">
+            <li id="footer-item"><a href="#">MapleStory</a></li>
+            <li id="footer-item"><a href="#">Github</a></li>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="../Scripts/HideShow.js"></script>
+    <script type="text/javascript" src="../Scripts/SymbolCalculator.js"></script>
+
+</body>
+</html>

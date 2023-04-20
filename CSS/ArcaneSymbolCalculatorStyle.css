@@ -1,0 +1,15 @@
+.main-element {
+    border : 1px solid #000000;
+}
+
+.element {
+    width : 500px;
+    height : 50px;
+    font-size : 14px;
+    text-align : center;
+}
+
+#calculate {
+    width : 150px;
+    height : 170px;
+}

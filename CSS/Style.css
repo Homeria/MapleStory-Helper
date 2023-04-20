@@ -1,0 +1,112 @@
+body {
+    display : flex;
+    flex-direction : column;
+    min-height : 80vh;
+    background-color : #3F3F3F;
+    color : #BFC8C8;
+    border : 1px solid #000000;
+}
+
+main {
+    display : flex;
+    flex : 1;
+}
+
+header {
+    border : 1px solid #000000;
+}
+
+#notViewNav {
+    width : 100px;
+    display : none;
+    border : 1px solid #000000;
+}
+
+#nav {
+    border : 1px solid #000000;
+    width : 300px;
+}
+
+#openButton {
+    width  : 50px;
+    height : 50px;
+}
+
+#logo {
+    width : 100%;
+    text-align : center;
+    font-size : 24px;
+    margin-top : 20px;
+    margin-bottom : 20px;
+    border : 1px solid #000000;
+}
+
+#titles, #subtitle-items {
+    list-style : none;
+    margin : 0;
+    padding-left :10px;
+    padding-top : 4px;
+    border : 1px solid #000000;
+}
+
+#subtitle-items {
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+
+#subtitle-item {
+    margin-top : 0px;
+    margin-bottom : 4px;
+    border : 1px solid #000000;
+}
+
+#subtitle-item > a, #logo > a {
+    color : inherit;
+    text-decoration : none;
+}
+
+#title-text {
+    font-size : 20px;
+    font-weight : bold;
+    margin : 0;
+    border : 1px solid #000000;
+}
+
+#subtitle-item {
+    font-size : 18px;
+}
+
+section {
+    flex : 1;
+    width : 1000px;
+    border : 1px solid #000000;
+}
+
+#section-title {
+    border : 1px solid #000000;
+    font-size : 30px;
+    padding : 10px;
+}
+
+#section-article {
+    border : 1px solid #000000;
+    padding : 10px;
+}
+
+footer {
+    border : 1px solid #000000;
+    height : 50px;
+    display : flex;
+    flex-direction : row;
+    padding : 10px;
+}
+
+footer > ul {
+    display : flex;
+    flex-direction : row;
+    list-style : none;
+}
+
+footer > ul > li {
+    padding-right : 10px;
+}

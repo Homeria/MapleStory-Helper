@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleStory Helper</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link rel="stylesheet" href="../CSS/ArcaneTotalSymbolCalculatorStyle.css">
+
+</head>
+<body>
+    
+    <header>
+        
+    </header>
+
+    <main>
+
+        <nav id="notViewNav">
+            <input type="button" id="openButton" value="OPEN" onclick="HideShowNav()">
+        </nav>
+
+        <nav id="nav">
+
+            <input type="button" id="openButton" value="OPEN" onclick="HideShowNav()">
+            <h1 id="logo"><a href="../index.html">MapleStory-Helper</a></h1>
+
+            <ul id="titles">
+
+
+                <li id="title">
+
+                    <p id="title-text">Symbol</p>
+
+                    <ul id="subtitle-items">
+                        <li id="subtitle-item"><a href="ArcaneSymbolCalculator.html">Arcane Symbol Calculator</a></li>
+                        <li id="subtitle-item"><a href="#">Arcane Total Symbol Calculator</a></li>
+                    </ul>
+
+                </li>
+
+                <li id="title">
+
+                    <p id="title-text">sample 2</p>
+
+                    <ul id="subtitle-items">
+                        <li id="subtitle-item">sample 2-1</li>
+                        <li id="subtitle-item">sample 2-2</li>
+                        <li id="subtitle-item">sample 2-3</li>
+                    </ul>
+
+                </li>
+
+                
+
+            </ul>
+        </nav>
+    
+        <section>
+    
+            <p id="section-title">Total Symbol Calculator</p>
+    
+            <article id="section-article">
+                
+                <table>
+                    <thead>
+                        <tr>
+                          <td><p class="table-title">종류</p></td>
+                          <td><p class="table-title">심볼 레벨</p></td>
+                          <td><p class="table-title">보유 개수</p></td>
+                          <td><p class="table-title">필요한 개수</p></td>
+                          <td><p class="table-title">필요한 메소</p></td>
+                          <td><p class="table-title">만렙까지의 기간</p></td>
+                          <td rowspan="8">
+
+                            <input type="button" id="calculate" value="계산" onclick="doCalculate()">
+
+                          </td>
+                        </tr>
+
+                        <tr>
+                            <td><p class="type-name">소멸의 여로</p></td>
+                            <td>
+    
+                                <select name="level" id="vj-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="vj-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="vj-req-num" class="result-num">-</p></td>
+                            <td><p id="vj-req-meso" class="result-meso">-</p></td>
+                            <td><p id="vj-req-period" class="result-period">-</p></td>
+                            
+                          </tr>
+                          <tr>
+                            <td><p class="type-name">츄츄 아일랜드</p></td>
+                            <td>
+    
+                                <select name="level" id="cc-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="cc-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="cc-req-num" class="result-num">-</p></td>
+                            <td><p id="cc-req-meso" class="result-meso">-</p></td>
+                            <td><p id="cc-req-period" class="result-period">-</p></td>
+                          </tr>
+                          <tr>
+                            <td><p class="type-name">레헬른</p></td>
+                            <td>
+    
+                                <select name="level" id="la-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="la-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="la-req-num" class="result-num">-</p></td>
+                            <td><p id="la-req-meso" class="result-meso">-</p></td>
+                            <td><p id="la-req-period" class="result-period">-</p></td>
+                          </tr>
+                          <tr>
+                            <td><p class="type-name">아르카나</p></td>
+                            <td>
+    
+                                <select name="level" id="ar-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="ar-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="ar-req-num" class="result-num">-</p></td>
+                            <td><p id="ar-req-meso" class="result-meso">-</p></td>
+                            <td><p id="ar-req-period" class="result-period">-</p></td>
+                          </tr>
+                          <tr>
+                            <td><p class="type-name">모라스</p></td>
+                            <td>
+    
+                                <select name="level" id="mo-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="mo-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="mo-req-num" class="result-num">-</p></td>
+                            <td><p id="mo-req-meso" class="result-meso">-</p></td>
+                            <td><p id="mo-req-period" class="result-period">-</p></td>
+                          </tr>
+                          <tr>
+                            <td><p class="type-name">에스페라</p></td>
+                            <td>
+    
+                                <select name="level" id="es-level" class="element">
+                                    <option value="0">보유 심볼 레벨</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+    
+                            </td>
+                            <td>
+    
+                                <input type="number" min="0" max="2679" id="es-num" class="element" placeholder="보유 중인 심볼의 현재 개수">
+    
+                            </td>
+                            <td><p id="es-req-num" class="result-num">-</p></td>
+                            <td><p id="es-req-meso" class="result-meso">-</p></td>
+                            <td><p id="es-req-period" class="result-period">-</p></td>
+                          </tr>
+                          <tr>
+                            <td colspan="3"><p class="type-name">총합</p></td>
+                            <td><p id="total-req-num" class="result-num">-</p></td>
+                            <td><p id="total-req-meso" class="result-meso">-</p></td>
+                            <td><p id="total-req-period" class="result-period">-</p></td>
+                          </tr>
+
+                      </thead>
+                    <tbody>
+                    </tbody>
+                    </table>
+
+            </article>
+    
+        </section>
+    </main>
+    
+
+    
+
+    
+
+    <footer>
+        <p>2023 Homeria</p>
+        <ul id="footer-items">
+            <li id="footer-item"><a href="#">MapleStory</a></li>
+            <li id="footer-item"><a href="#">Github</a></li>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="../Scripts/HideShow.js"></script>
+    <script type="text/javascript" src="../Scripts/ArcaneSymbolTotalCalculator.js"></script>
+
+</body>
+</html>

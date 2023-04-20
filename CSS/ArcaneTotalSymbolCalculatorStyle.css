@@ -1,0 +1,33 @@
+table {
+    border-collapse : collapse;
+}
+
+th, td {
+    border : 1px solid black;
+    padding : 10px;
+}
+
+.table-title {
+    text-align : center;
+    font-weight : bold;
+}
+
+.type-name {
+    text-align : center;
+}
+
+.result-num, .result-meso, .result-period {
+    text-align : center;
+}
+
+.element {
+    width : 150px;
+    height : 25px;
+    font-size : 10px;
+    text-align : center;
+}
+
+#calculate {
+    font-size : 14px;
+    height : 500px;
+}
